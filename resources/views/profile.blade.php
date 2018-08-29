@@ -13,7 +13,7 @@
           </div>
           <div class="jumbotron">
                 <div class="panel-body" align="center">
-                    <p>[User's Name]</p>
+                    <p>[User's Name]</p> <input name="name" id="name" disabled></input>
                 </div>
                 <br>
                 <div class="panel-body" align="center">
@@ -23,13 +23,13 @@
             <div class="panel panel-default" align="left">
               <br>
                 <div class="panel-body" align="left">
-                    <p>Skills</p>
-                    <p>Education</p>
-                    <p>Current Job</p>
-                    <p>Previous Job</p>
-                    <p>Location</p>
-                    <p>Area of Work (e.g. IT,Engineering, etc)</p>
-                    <p>Job Preference</p>
+                    <p>Skills</p> <textarea rows="4" col="50"> </textarea> <br> <br>
+                    <p>Education</p> <textarea rows="4" col="50"> </textarea> <br> <br>
+                    <p>Current Job</p> <textarea rows="4" col="50"> </textarea> <br> <br>
+                    <p>Previous Job</p> <textarea rows="4" col="50"> </textarea> <br> <br>
+                    <p>Location</p> <textarea rows="4" col="50"> </textarea> <br> <br>
+                    <p>Area of Work (e.g. IT,Engineering, etc)</p> <textarea rows="4" col="50"> </textarea> <br> <br>
+                    <p>Job Preference</p> <textarea rows="4" col="50"> </textarea>
                 </div>
             </div>
           </div>
