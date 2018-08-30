@@ -23,6 +23,7 @@
             <div class="panel panel-default" align="left">
               <br>
                 <div class="panel-body" align="left">
+                  <form action="" method="POST">
                     <p>Skills</p> <textarea rows="4" col="50"> </textarea> <br> <br>
                     <p>Education</p> <textarea rows="4" col="50"> </textarea> <br> <br>
                     <p>Current Job</p> <textarea rows="4" col="50"> </textarea> <br> <br>
@@ -30,6 +31,7 @@
                     <p>Location</p> <textarea rows="4" col="50"> </textarea> <br> <br>
                     <p>Area of Work (e.g. IT,Engineering, etc)</p> <textarea rows="4" col="50"> </textarea> <br> <br>
                     <p>Job Preference</p> <textarea rows="4" col="50"> </textarea>
+                  </form>
                 </div>
             </div>
           </div>
