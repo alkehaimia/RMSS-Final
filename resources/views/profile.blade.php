@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+<!--
 <head>
   <script>
     function addFields(){
@@ -17,7 +17,7 @@
     }
   </script>
 </head>
-
+-->
 <div class="container">
     <div class="row">
       <div class="container-fluid">
@@ -32,7 +32,8 @@
                 <div class="panel-body" align="center">
                     <p>[User's Name]</p> <input name="name" id="name" disabled></input>
 
-                <br>
+                <br><br>
+
                     <p>[Profile Picture]</p> <input name="picture" id="picture" disabled></input>
                 </div>
                 <br><br>
@@ -41,14 +42,20 @@
                 <div class="panel-body" align="left">
                   <form action="" method="POST">
                     <h5>Skills</h5>
-                    <input type="text" name="skill_1" placeholder="Skill 1"> <br> <br>
+                    <input type="text" name="skill_1" placeholder="Skill 1" required> <br> <br>
                     <input type="text" name="skill_2" placeholder="Skill 2"> <br> <br>
                     <input type="text" name="skill_3" placeholder="Skill 3"> <br> <br>
                     <input type="text" name="skill_4" placeholder="Skill 4"> <br> <br>
-                    <div id="addSkillsField" />
+                    <input type="text" name="skill_5" placeholder="Skill 5"> <br> <br>
+                    <input type="text" name="skill_6" placeholder="Skill 6"> <br> <br>
+                    <input type="text" name="skill_7" placeholder="Skill 7"> <br> <br>
+                    <input type="text" name="skill_8" placeholder="Skill 8"> <br> <br>
+                    <input type="text" name="skill_9" placeholder="Skill 9"> <br> <br>
+                    <input type="text" name="skill_10" placeholder="Skill 10"> <br> <br>
+                  <!--  <div id="addSkillsField" />
                     <br> <br>
                     <button type="button" onclick="addFields();">Add More Skills</button>
-
+                  -->
                     <br> <br> <br>
                     <h6>Click here to submit your <b>skills</b></h6>
                     <input type="submit" value="Save"></input>
