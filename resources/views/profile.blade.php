@@ -31,13 +31,12 @@
           <div class="jumbotron">
                 <div class="panel-body" align="center">
                     <p>[User's Name]</p> <input name="name" id="name" disabled></input>
-                </div>
+
                 <br>
-                <div class="panel-body" align="center">
                     <p>[Profile Picture]</p> <input name="picture" id="picture" disabled></input>
                 </div>
                 <br><br>
-            <div class="panel panel-default" align="left">
+            <div class="panel panel-default" align="center">
               <br>
                 <div class="panel-body" align="left">
                   <form action="" method="POST">
