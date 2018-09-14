@@ -3,7 +3,7 @@
 @section('content')
 
 <head>
-  <!--<script src="{{ asset('js/createSkillsInput.js') }}" defer></script>-->
+  <script src="{{ asset('js/createSkillsInput.js') }}" defer></script>
 </head>
 
 <div class="container">
@@ -28,11 +28,11 @@
             <div class="panel panel-default" align="center">
               <br>
                 <div class="panel-body" align="left">
-                  <h6>How many skills would you like to enter?</h6>
-                  <br><br>
-                  <h7>Please enter in the box <b>below</b>.</h7>
-                  <br><br>
-                  <input type="text" id="numberOfSkills" placeholder="Number of Skills"></input>
+                  <p>How many skills would you like to enter?</p>
+                  <br>
+                  <p>Please enter in the box <b>below</b>.</p>
+                  <br>
+                  <input type="text" name="numberOfSkills" id="numberOfSkills" placeholder="Number of Skills"></input>
                   <br><br>
                   <button type="button" onclick="addFields()">Add More Skills</button>
                   <!--<a href="#" onclick="addFields()">Add More Skills</a>-->
@@ -41,11 +41,11 @@
                   <br><br>
 
                   <form action="" method="POST">
-                    <div id="addSkillsField">
+                    <div class="panel-body" name="addSkillsField" id="addSkillsField">
 
                     </div>
 
-                    <h6>Click here to submit your <b>skills</b></h6>
+                    <p>Click here to submit your <b>skills</b></p>
                     <input type="submit" value="Save"></input>
                     </form>
                 </div>
