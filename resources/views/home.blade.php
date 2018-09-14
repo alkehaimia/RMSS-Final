@@ -14,9 +14,8 @@
                         </div>
                     @endif
 
-                    <div class="alert alert-success">
-                      <p> You're logged in as USERS</p>
-                    </div>
+                    You are logged in!
+                    Welcome to RMSS!
                 </div>
             </div>
         </div>
