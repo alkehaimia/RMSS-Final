@@ -10,11 +10,22 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function (){
+    return view('index');
+})->name('index');
+
+Route::get('/home', function (){
+    return view('index');
+})->name('index');
+
+Route::resource('createJob', 'createJobController');
+Route::resource('createJob2', 'createJob2Controller');
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
+//Authentication Routes
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
