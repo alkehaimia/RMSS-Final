@@ -28,6 +28,10 @@ Route::get('/profile', function(){
     return view('profile');
 })->name('profile');
 
+Route::get('/displayedProfile', function(){
+    return view('displayedProfile');
+})->name('displayedProfile');
+
 
 //Authentication Routes
 Auth::routes();
