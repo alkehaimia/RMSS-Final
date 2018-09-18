@@ -10,6 +10,17 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function (){
+    return view('index');
+})->name('index');
+
+Route::get('/home', function (){
+    return view('index');
+})->name('index');
+
+Route::resource('createJob', 'createJobController');
+Route::resource('createJob2', 'createJob2Controller');
+
 
 /**Route::get('/', function (){
     return view('index');
@@ -25,6 +36,7 @@ Route::get('/index', function (){
 
 Route::group(['prefix' => 'users'], function(){
   Route::resource('/','UserController');
+
 });
 //Route::get('/', function () {
   //  return view('index');
@@ -32,6 +44,7 @@ Route::group(['prefix' => 'users'], function(){
 
 //Authentication Routes
 Auth::routes();
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/' , function(){
@@ -58,3 +71,4 @@ Route::get('/home',function(){
 });
 
 ?>
+
