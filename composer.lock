@@ -725,6 +725,7 @@
         },
         {
             "name": "league/flysystem",
+
             "version": "1.0.47",
             "source": {
                 "type": "git",
@@ -735,6 +736,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/a11e4a75f256bdacf99d20780ce42d3b8272975c",
                 "reference": "a11e4a75f256bdacf99d20780ce42d3b8272975c",
+
                 "shasum": ""
             },
             "require": {
@@ -805,6 +807,7 @@
                 "sftp",
                 "storage"
             ],
+
             "time": "2018-09-14T15:30:29+00:00"
         },
         {
