@@ -44,6 +44,11 @@ Route::resource('UserProfile', 'ProfileController');
 Route::resource('ProfileSkills', 'ProfileSkillsController');
 Route::resource('ProfileEducation', 'ProfileEducationController');
 
+/*
+Route::resource('profile', 'ProfileController');
+Route::resource('profile_skills', 'ProfileSkillsController');
+Route::resource('profile_education', 'ProfileEducationController');
+*/
 
 //Authentication Routes
 Auth::routes();
