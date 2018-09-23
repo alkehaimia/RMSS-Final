@@ -25,6 +25,7 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-RMSS">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">RMSS
+
                 </a>
                 <a class="navbar-brand" href="{{ url('/createJob') }}">Create job
                 </a>
@@ -72,9 +73,16 @@
             </div>
         </nav>
 
-        <main class="py-4">
+
             @yield('content')
-        </main>
+            <br><br><br>
+            <footer>
+              <div class="wrapper" align="center">
+              <p><strong>© RMSS Group</strong></p>
+            <a href="https://www.rmit.edu.au/">
+            <img src="img/RMIT_logo.JPG" alt="logo" style="width:200px;height:60;">
+</div>
+            </footer>
     </div>
 </body>
 </html>

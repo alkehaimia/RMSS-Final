@@ -37,6 +37,7 @@ Route::get('/index', function (){
 Route::group(['prefix' => 'users'], function(){
   Route::resource('/','UserController');
 
+
 });
 //Route::get('/', function () {
   //  return view('index');
