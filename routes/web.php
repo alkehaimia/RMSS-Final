@@ -32,6 +32,18 @@ Route::get('/displayedProfile', function(){
     return view('displayedProfile');
 })->name('displayedProfile');
 
+Route::get('/profileSkills', function(){
+    return view('profileSkills');
+})->name('profileSkills');
+
+Route::get('/profileEducation', function(){
+    return view('profileEducation');
+})->name('profileEducation');
+
+Route::resource('UserProfile', 'ProfileController');
+Route::resource('ProfileSkills', 'ProfileSkillsController');
+Route::resource('ProfileEducation', 'ProfileEducationController');
+
 
 //Authentication Routes
 Auth::routes();

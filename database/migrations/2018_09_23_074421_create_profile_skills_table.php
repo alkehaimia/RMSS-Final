@@ -14,9 +14,9 @@ class CreateProfileSkillsTable extends Migration
     public function up()
     {
         Schema::create('profile_skills', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('skill')
-            $table->timestamps();
+          $table->increments('id');
+          $table->integer('userID');
+          $table->string('skill');
         });
     }
 
