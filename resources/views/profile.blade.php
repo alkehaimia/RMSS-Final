@@ -25,47 +25,47 @@
 
                 {!! Form::open(['action' => 'ProfileController@store', 'method' => 'Post']) !!}
                   <div class="form-group">
-                    {{Form::label('firstName', 'firstName')}}
-                    {{Form::text('name', '', ['class' => 'form-control'])}}
+                    {{Form::label('firstName', 'First Name')}}
+                    {{Form::text('firstname', '', ['class' => 'form-control'])}}
                   </div>
 
                   <div class="form-group">
-                    {{Form::label('lastName', 'lastName')}}
+                    {{Form::label('lastName', 'Last Name')}}
                     {{Form::text('lastName', '', ['class' => 'form-control'])}}
                   </div>
 
                   <div class="form-group">
-                    {{Form::label('education ', 'education')}}
+                    {{Form::label('education ', 'Education')}}
                     {{Form::text('education', '', ['class' => 'form-control'])}}
                   </div>
 
                   <div class="form-group">
-                    {{Form::label('currentJob', 'currentJob')}}
+                    {{Form::label('currentJob', 'Current Job')}}
                     {{Form::text('currentJob', '', ['class' => 'form-control'])}}
                   </div>
 
                   <div class="form-group">
-                    {{Form::label('previousJob', 'previousJob')}}
+                    {{Form::label('previousJob', 'Previous Job')}}
                     {{Form::text('previousJob', '', ['class' => 'form-control'])}}
                   </div>
 
                   <div class="form-group">
-                    {{Form::label('location', 'location')}}
+                    {{Form::label('location', 'Location')}}
                     {{Form::text('location', '', ['class' => 'form-control'])}}
                   </div>
 
                   <div class="form-group">
-                    {{Form::label('areaOfWork', 'areaOfWork')}}
+                    {{Form::label('areaOfWork', 'Area Of Work')}}
                     {{Form::text('areaOfWork', '', ['class' => 'form-control'])}}
                   </div>
 
                   <div class="form-group">
-                    {{Form::label('jobPreference', 'jobPreference')}}
+                    {{Form::label('jobPreference', 'Job Preference')}}
                     {{Form::text('jobPreference', '', ['class' => 'form-control'])}}
                   </div>
 
                   <div class="form-group">
-                    {{Form::label('bioDescription', 'bioDescription')}}
+                    {{Form::label('bioDescription', 'Personal Description')}}
                     {{Form::textarea('bioDescription', '', ['class' => 'form-control'])}}
                   </div>
 

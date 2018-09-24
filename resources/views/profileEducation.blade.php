@@ -26,12 +26,43 @@
               <br>
                 <div class="panel-body" align="left">
 
+                  {!! Form::open(['action' => 'ProfileEducationController@store', 'method' => 'Post']) !!}
+
+                    <div class="form-group">
+                      {{Form::label('educationfield1', 'Field of Study')}}
+                      {{Form::text('field1', '', ['class' => 'form-control'])}}
+                      {{Form::select('6', array('1' => 'High School Diploma','2' => 'Tafe Degree','3' => 'Associates Degree','4' => 'Bachelors Degree','5' => 'Masters Degree','6' => 'PHD')}}
+                    </div>
+
+                    <div class="form-group">
+                      {{Form::label('educationfield1', 'Field of Study')}}
+                      {{Form::text('field1', '', ['class' => 'form-control'])}}
+                      {{Form::select('6', array('1' => 'High School Diploma','2' => 'Tafe Degree','3' => 'Associates Degree','4' => 'Bachelors Degree','5' => 'Masters Degree','6' => 'PHD')}}
+                    </div>
+
+                    <div class="form-group">
+                      {{Form::label('educationfield1', 'Field of Study')}}
+                      {{Form::text('field1', '', ['class' => 'form-control'])}}
+                      {{Form::select('6', array('1' => 'High School Diploma','2' => 'Tafe Degree','3' => 'Associates Degree','4' => 'Bachelors Degree','5' => 'Masters Degree','6' => 'PHD')}}
+                    </div>
+
+                    <div class="form-group">
+                      {{Form::label('educationfield1', 'Field of Study')}}
+                      {{Form::text('field1', '', ['class' => 'form-control'])}}
+                      {{Form::select('6', array('1' => 'High School Diploma','2' => 'Tafe Degree','3' => 'Associates Degree','4' => 'Bachelors Degree','5' => 'Masters Degree','6' => 'PHD')}}
+                    </div>
+
+                    <div class="form-group">
+                      {{Form::label('educationfield1', 'Field of Study')}}
+                      {{Form::text('field1', '', ['class' => 'form-control'])}}
+                      {{Form::select('6', array('1' => 'High School Diploma','2' => 'Tafe Degree','3' => 'Associates Degree','4' => 'Bachelors Degree','5' => 'Masters Degree','6' => 'PHD')}}
+                    </div>
+
+                    {{Form::submit('next page', ['class'=>'btn btn-primary'])}}
+                    {!! Form::close() !!}
 
 
                 </div>
-
-              <br><br>
-
 
             </div>
 
