@@ -15,7 +15,7 @@ class CreateSkillsRequirementTable extends Migration
     {
         Schema::create('skills_requirement', function (Blueprint $table) {
             $table->increments('Job_Skills_id');
-            $table->integer('JSkillsFK');
+            $table->integer('Job_Listing_id');
             $table->string('Skill_required');
             $table->timestamps();
         });

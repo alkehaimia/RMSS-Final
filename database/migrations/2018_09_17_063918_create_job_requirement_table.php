@@ -15,7 +15,7 @@ class CreateJobRequirementTable extends Migration
     {
         Schema::create('job_requirement', function (Blueprint $table) {
             $table->increments('Job_requirement_id');
-            $table->integer('JRequirementFK');
+            $table->integer('Job_Listing_id');
             $table->string('Job_Required');
             $table->timestamps();
         });

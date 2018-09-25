@@ -14,8 +14,7 @@ class CreateRegistrationTable extends Migration
     public function up()
     {
         Schema::create('registration', function (Blueprint $table) {
-            $table->increments('rego_id');
-            $table->integer('RegoFK');
+            $table->increments('user_ID');
             $table->string('Email');
             $table->string('Password');
             $table->timestamps();

@@ -15,7 +15,7 @@ class CreatePreviousJobsTable extends Migration
     {
         Schema::create('previous_jobs', function (Blueprint $table) {
             $table->increments('Pjob_id');
-            $table->integer('PJobFK');
+            $table->integer('profile_ID');
             $table->string('Job_Name');
             $table->string('Job_Company');
             $table->string('Duration');
