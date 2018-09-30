@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\UserProfile;
+
 class ProfileController extends Controller
 {
     public function showProfile()
@@ -44,7 +46,7 @@ class ProfileController extends Controller
              'bioDescription' => 'required'
         ]);
 
-        $post = new createProfile;
+        $post = new UserProfile;
         $post->firstName = $request->input('firstName');
         $post->lastName = $request->input('lastName');
         $post->currentJob = $request->input('currentJob');

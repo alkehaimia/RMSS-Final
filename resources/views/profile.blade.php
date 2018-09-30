@@ -2,11 +2,6 @@
 
 @section('content')
 
-<head>
-  <!--<script src="{{ asset('js/createSkillsInput.js') }}" defer></script>--->
-  <link rel="javascript" type="javascript" href="{{ url('/createSkillsInput.js') }}">
-</head>
-
 <div class="container">
     <div class="row">
       <div class="container-fluid">
@@ -32,11 +27,6 @@
                   <div class="form-group">
                     {{Form::label('lastName', 'Last Name')}}
                     {{Form::text('lastName', '', ['class' => 'form-control'])}}
-                  </div>
-
-                  <div class="form-group">
-                    {{Form::label('education ', 'Education')}}
-                    {{Form::text('education', '', ['class' => 'form-control'])}}
                   </div>
 
                   <div class="form-group">

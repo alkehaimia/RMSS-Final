@@ -18,7 +18,6 @@ class CreateUserProfilesTable extends Migration
           $table->integer('userID');
           $table->string('firstName');
           $table->string('lastName');
-          $table->string('education');
           $table->string('currentJob');
           $table->string('previousJob');
           $table->string('location');

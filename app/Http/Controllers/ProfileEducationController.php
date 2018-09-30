@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ProfileEducation extends Controller
+use App\ProfileEducation;
+
+class ProfileEducationController extends Controller
 {
   public function showProfile()
   {

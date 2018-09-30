@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ProfileSkills extends Controller
+use App\ProfileSkills;
+
+class ProfileSkillsController extends Controller
 {
   public function showProfile()
   {
@@ -21,7 +23,7 @@ class ProfileSkills extends Controller
                if(!isset($nullCheck) || trim($nullCheck)  == '') {
 
                }else {
-               $post = new profileSkills;
+               $post = new ProfileSkills;
                $post->skill = $request->input('skill'.$i);
                $post->userID = auth()->user()->id;
                $post->save();
