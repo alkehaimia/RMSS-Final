@@ -4,46 +4,31 @@
 
 {!! Form::open(['action' => 'createJobController@store', 'method' => 'Post']) !!}
     <div class="form-group">
-    {{Form::label('name', 'name')}}
-    {{Form::text('name', '', ['class' => 'form-control'])}}
+    {{Form::label('Job_Name', 'Job_Name')}}
+    {{Form::text('Job_Name', '', ['class' => 'form-control'])}}
     </div>
 
     <div class="form-group">
-    {{Form::label('currentJob', 'currentJob')}}
-    {{Form::text('currentJob', '', ['class' => 'form-control'])}}
+    {{Form::label('Job_Company', 'Job_Company')}}
+    {{Form::text('Job_Company', '', ['class' => 'form-control'])}}
     </div>
 
     <div class="form-group">
-    {{Form::label('currentJobTime', 'currentJobTime')}}
-    {{Form::text('currentJobTime', '', ['class' => 'form-control'])}}
+    {{Form::label('Job_Area', 'Job_Area')}}
+    {{Form::text('Job_Area', '', ['class' => 'form-control'])}}
     </div>
 
     <div class="form-group">
-    {{Form::label('previousJob', 'previousJob')}}
-    {{Form::text('previousJob', '', ['class' => 'form-control'])}}
+    {{Form::label('Job_Hours', 'Job_Hours')}}
+    {{Form::text('Job_Hours', '', ['class' => 'form-control'])}}
     </div>
 
     <div class="form-group">
-    {{Form::label('previousJobTime', 'previousJobTime')}}
-    {{Form::text('previousJobTime', '', ['class' => 'form-control'])}}
-    </div>
-
-    <div class="form-group">
-    {{Form::label('location', 'location')}}
-    {{Form::text('location', '', ['class' => 'form-control'])}}
-    </div>
-
-    <div class="form-group">
-    {{Form::label('areaOfWork', 'areaOfWork')}}
-    {{Form::text('areaOfWork', '', ['class' => 'form-control'])}}
-    </div>
-
-    <div class="form-group">
-    {{Form::label('jobPreference', 'jobPreference')}}
-    {{Form::text('jobPreference', '', ['class' => 'form-control'])}}
+    {{Form::label('Contact_Information', 'Contact_Information')}}
+    {{Form::text('Contact_Information', '', ['class' => 'form-control'])}}
     </div>
 
     {{Form::submit('next page', ['class'=>'btn btn-primary'])}}
-{!! Form::close() !!}
+    {!! Form::close() !!}
 
 @endsection

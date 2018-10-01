@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\createJob2;
+use App\createJob;
 
 class createJob2Controller extends Controller
 {
@@ -41,21 +42,24 @@ class createJob2Controller extends Controller
 
             for ($i = 1; $i < 11; $i++){ 
 
+                $job_id = createJob::latest()->value('Job_Listing_id');
+
                 $nullCheck = $request->input('skill'.$i);
                 if(!isset($nullCheck) || trim($nullCheck)  == '') {
                    
                 }else { 
 
                 $post = new createJob2;
-                $post->skill = $request->input('skill'.$i);
-                $post->userID = auth()->user()->id;
+                $post->Skill_required = $request->input('skill'.$i);
+                $post->User_id = auth()->user()->id;
+                $post->Job_Listing_id = $job_id;
                 $post->save();
 
                 }
 
             }
 
-            return redirect('/createJob3');
+            return redirect('/createJob3'); 
     }
 
     /**

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateJob2Table extends Migration
+class CreateSkillsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,9 +14,10 @@ class CreateJob2Table extends Migration
     public function up()
     {
         Schema::create('skills', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('userID');
-            $table->string('skill');
+            $table->increments('skill_id');
+            $table->integer('profile_ID');
+            $table->string('Skill');
+            $table->timestamps();
         });
     }
 

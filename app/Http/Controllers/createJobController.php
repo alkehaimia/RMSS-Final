@@ -36,26 +36,20 @@ class createJobController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-             'name' => 'required',
-             'currentJob' => 'required',
-             'currentJobTime' => 'required',
-             'previousJob' => 'required',
-             'previousJobTime' => 'required',
-             'location' => 'required',
-             'areaOfWork' => 'required',
-             'jobPreference' => 'required'
+             'Job_Name' => 'required',
+             'Job_Company' => 'required',
+             'Job_Area' => 'required',
+             'Job_Hours' => 'required',
+             'Contact_Information' => 'required'
         ]);
         
         $post = new createJob;    
-        $post->name = $request->input('name');
-        $post->currentJob = $request->input('currentJob');
-        $post->currentJobTime = $request->input('currentJobTime');
-        $post->previousJob = $request->input('previousJob');
-        $post->previousJobTime = $request->input('previousJobTime');
-        $post->location = $request->input('location');
-        $post->areaOfWork = $request->input('areaOfWork');
-        $post->jobPreference = $request->input('jobPreference');
-        $post->userID = auth()->user()->id;
+        $post->Job_Name = $request->input('Job_Name');
+        $post->Job_Company = $request->input('Job_Company');
+        $post->Job_Area = $request->input('Job_Area');
+        $post->Job_Hours = $request->input('Job_Hours');
+        $post->Contact_Information = $request->input('Contact_Information');
+        $post->user_id = auth()->user()->id;
         $post->save();
 
         return redirect('/createJob2');
