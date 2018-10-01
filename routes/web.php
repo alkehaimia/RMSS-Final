@@ -29,7 +29,7 @@ Route::get('/profile', function(){
 })->name('profile');
 
 Route::get('/displayedProfile', function(){
-    return view('displayedProfile');
+    return view('displayedProfile', 'ProfileController@display');
 })->name('displayedProfile');
 
 Route::get('/profileSkills', function(){
@@ -39,6 +39,10 @@ Route::get('/profileSkills', function(){
 Route::get('/profileEducation', function(){
     return view('profileEducation');
 })->name('profileEducation');
+
+Route::get('/JobSeekerResults', function(){
+    return view('JobSeekerResults');
+})->name('JobSeekerResults');
 
 Route::resource('UserProfile', 'ProfileController');
 Route::resource('ProfileSkills', 'ProfileSkillsController');

@@ -55,8 +55,14 @@ class ProfileController extends Controller
         $post->areaOfWork = $request->input('areaOfWork');
         $post->jobPreference = $request->input('jobPreference');
         $post->bioDescription = $request->input('bioDescription');
-        $post->userID = auth()->user()->id;
+        //$post->userID = auth()->user()->id;
         $post->save();
         return redirect('/profileSkills');
+    }
+
+    public function display()
+    {
+      $profileInfo = UserProfile::all();
+      return view('/displayedProfile', compact('user_profile'))
     }
 }

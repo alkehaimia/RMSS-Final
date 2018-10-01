@@ -21,7 +21,7 @@
                 {!! Form::open(['action' => 'ProfileController@store', 'method' => 'Post']) !!}
                   <div class="form-group">
                     {{Form::label('firstName', 'First Name')}}
-                    {{Form::text('firstname', '', ['class' => 'form-control'])}}
+                    {{Form::text('firstName', '', ['class' => 'form-control'])}}
                   </div>
 
                   <div class="form-group">
@@ -55,7 +55,7 @@
                   </div>
 
                   <div class="form-group">
-                    {{Form::label('bioDescription', 'Personal Description')}}
+                    {{Form::label('bioDescription', 'Describe Yourself')}}
                     {{Form::textarea('bioDescription', '', ['class' => 'form-control'])}}
                   </div>
 
