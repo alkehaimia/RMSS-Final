@@ -34,6 +34,23 @@ Route::get('/index', function (){
     return view('index');
 })->name('index');
 
+Route::get('/about', function (){
+    return view('about');
+})->name('about');
+
+Route::get('/support', function (){
+  return view('support');
+})->name('support');
+//Route::get('/contact', function (){
+  //  return view('contact');
+//})->name('contact');
+//Route::get('/contact',[
+  //'uses'=>'ContactController@show']);
+
+Route::get('/contactUS', 'ContactUSController@contactus');
+Route::post('/contactUS', ['as'=>'contactus.store','uses'=>'ContactUSController@contactUSPost']);
+
+
 Route::group(['prefix' => 'users'], function(){
   Route::resource('/','UserController');
 
