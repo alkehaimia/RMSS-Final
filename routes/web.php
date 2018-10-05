@@ -10,6 +10,17 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function (){
+    return view('index');
+})->name('index');
+
+Route::get('/home', function (){
+    return view('index');
+})->name('index');
+
+Route::resource('createJob', 'createJobController');
+Route::resource('createJob2', 'createJob2Controller');
+
 
 /**Route::get('/', function (){
     return view('index');
@@ -42,6 +53,40 @@ Route::post('/contactUS', ['as'=>'contactus.store','uses'=>'ContactUSController@
 
 Route::group(['prefix' => 'users'], function(){
   Route::resource('/','UserController');
+
+
+Route::get('/profile', function(){
+    return view('profile');
+})->name('profile');
+
+Route::get('/displayedProfile', function(){
+    return view('displayedProfile');
+})->name('displayedProfile');
+
+Route::get('/profileSkills', function(){
+    return view('profileSkills');
+})->name('profileSkills');
+
+Route::get('/profileEducation', function(){
+    return view('profileEducation');
+})->name('profileEducation');
+
+Route::resource('UserProfile', 'ProfileController');
+Route::resource('ProfileSkills', 'ProfileSkillsController');
+Route::resource('ProfileEducation', 'ProfileEducationController');
+
+/*
+Route::resource('profile', 'ProfileController');
+Route::resource('profile_skills', 'ProfileSkillsController');
+Route::resource('profile_education', 'ProfileEducationController');
+*/
+
+//Authentication Routes
+Auth::routes();
+
+//Route::get('/home', 'HomeController@index')->name('home');
+?>
+
 });
 //Route::get('/', function () {
   //  return view('index');
@@ -49,6 +94,7 @@ Route::group(['prefix' => 'users'], function(){
 
 //Authentication Routes
 Auth::routes();
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/' , function(){
