@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\UserProfile;
+
 class ProfileController extends Controller
 {
     public function showProfile()
@@ -31,20 +33,36 @@ class ProfileController extends Controller
       //
     }
 
-    public function addSkillsInProfile(Request $request)
-  {
-      $rules = [];
-      foreach($request->input('name') as $key => $value) {
-          $rules["name.{$key}"] = 'required';
-      }
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+             'firstName' => 'required',
+             'lastName' => 'required',
+             'currentJob' => 'required',
+             'previousJob' => 'required',
+             'location' => 'required',
+             'areaOfWork' => 'required',
+             'jobPreference' => 'required',
+             'bioDescription' => 'required'
+        ]);
 
-      $validator = Validator::make($request->all(), $rules);
-      if ($validator->passes()) {
-          foreach($request->input('skill') as $key => $value) {
-              SkillsList::create(['skill'=>$value]);
-          }
-          return response()->json(['success'=>'done']);
-      }
-      return response()->json(['error'=>$validator->errors()->all()]);
-  }
+        $post = new UserProfile;
+        $post->firstName = $request->input('firstName');
+        $post->lastName = $request->input('lastName');
+        $post->currentJob = $request->input('currentJob');
+        $post->previousJob = $request->input('previousJob');
+        $post->location = $request->input('location');
+        $post->areaOfWork = $request->input('areaOfWork');
+        $post->jobPreference = $request->input('jobPreference');
+        $post->bioDescription = $request->input('bioDescription');
+        //$post->userID = auth()->user()->id;
+        $post->save();
+        return redirect('/profileSkills');
+    }
+
+    public function display()
+    {
+      $profileInfo = UserProfile::all();
+      return view('/displayedProfile', compact('user_profile'))
+    }
 }

@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class UserProfile extends Model
 {
-  public $table = "profile_skills";
-  public $fillable = ['skill']
+
+    protected $table = 'user_profiles';
+    //public $primaryKey = 'id';
+    public $timestamps = false;
+
 }

@@ -2,11 +2,6 @@
 
 @section('content')
 
-<head>
-  <!--<script src="{{ asset('js/createSkillsInput.js') }}" defer></script>--->
-  <link rel="javascript" type="javascript" href="{{ url('/createSkillsInput.js') }}">
-</head>
-
 <div class="container">
     <div class="row">
       <div class="container-fluid">
@@ -18,61 +13,57 @@
             </div>
           </div>
           <div class="jumbotron">
-                <div class="panel-body" align="center">
-                    <p>[User's Name]</p> <input name="name" id="name" disabled></input>
 
-                <br><br>
-
-                    <p>[Profile Picture]</p> <input name="picture" id="picture" disabled></input>
-                </div>
-                <br><br>
             <div class="panel panel-default" align="center">
               <br>
-                <div class="panel-body" align="left">
+              <div class="panel-body" align="left">
 
-                  <div class ="form-group">
-                    <form name="add_skill" id="add_skill">
-                      <div class="alert alert-danger live-error-message" style="display:none">
-                        <ul></ul>
-                      </div>
-                      <div class="alert alert-success live-success-message" style="display:none">
-                        <ul></ul>
-                      </div>
-                      <div class="table-responsive">
-                        <table class="table table-bordered" id="get_dynemic_field">
-                          <tr>
-                            <td><input type="text" name="skill[]" placeholder="Enter your skill" class="form-control skill_list" /></td>
-                            <td><button type="button" name="add" id="add" class="btn btn-success">Add More</button></td>
-                          </tr>
-                        </table>
-                        <input type="button" name="submit" id="submit" class="btn btn-info" value="Submit" />
-                      </div>
-                    </form>
+                {!! Form::open(['action' => 'ProfileController@store', 'method' => 'Post']) !!}
+                  <div class="form-group">
+                    {{Form::label('firstName', 'First Name')}}
+                    {{Form::text('firstName', '', ['class' => 'form-control'])}}
                   </div>
 
-                </div>
+                  <div class="form-group">
+                    {{Form::label('lastName', 'Last Name')}}
+                    {{Form::text('lastName', '', ['class' => 'form-control'])}}
+                  </div>
 
-              <br><br>
+                  <div class="form-group">
+                    {{Form::label('currentJob', 'Current Job')}}
+                    {{Form::text('currentJob', '', ['class' => 'form-control'])}}
+                  </div>
 
-              <div class="panel-body" align="left">
-                <h5>Education</h5> <textarea rows="4" col="50" placeholder="Education"> </textarea>
+                  <div class="form-group">
+                    {{Form::label('previousJob', 'Previous Job')}}
+                    {{Form::text('previousJob', '', ['class' => 'form-control'])}}
+                  </div>
+
+                  <div class="form-group">
+                    {{Form::label('location', 'Location')}}
+                    {{Form::text('location', '', ['class' => 'form-control'])}}
+                  </div>
+
+                  <div class="form-group">
+                    {{Form::label('areaOfWork', 'Area Of Work')}}
+                    {{Form::text('areaOfWork', '', ['class' => 'form-control'])}}
+                  </div>
+
+                  <div class="form-group">
+                    {{Form::label('jobPreference', 'Job Preference')}}
+                    {{Form::text('jobPreference', '', ['class' => 'form-control'])}}
+                  </div>
+
+                  <div class="form-group">
+                    {{Form::label('bioDescription', 'Describe Yourself')}}
+                    {{Form::textarea('bioDescription', '', ['class' => 'form-control'])}}
+                  </div>
+
+                  {{Form::submit('next page', ['class'=>'btn btn-primary'])}}
+                  {!! Form::close() !!}
+
               </div>
 
-              <br> <br>
-
-              <div class="panel-body" align="left">
-                <form action="" method="POST">
-                <h5>Current Job</h5> <textarea rows="4" col="50" placeholder="Current Job"> </textarea> <br> <br>
-                <h5>Previous Job</h5> <textarea rows="4" col="50" placeholder="Previous Job"> </textarea> <br> <br>
-                <h5>Location</h5> <textarea rows="4" col="50" placeholder="Location"> </textarea> <br> <br>
-                <h5>Area of Work (e.g. IT,Engineering, etc)</h5> <textarea rows="4" col="50" placeholder="Area of Work"> </textarea> <br> <br>
-                <h5>Job Preference</h5> <textarea rows="4" col="50" placeholder="Job Preference"> </textarea> <br><br>
-
-                <br> <br>
-                <h6>Click here to submit your <b>profile information</b></h6>
-                <input type="submit" value="Save"></input>
-                </form>
-            </div>
 
             <br> <br>
 
@@ -83,6 +74,7 @@
         </div>
     </div>
   </div>
+
 @endsection
 
 <!--
