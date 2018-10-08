@@ -29,7 +29,14 @@ Route::get('/profile', function(){
 })->name('profile');
 
 Route::get('/displayedProfile', function(){
-    return view('displayedProfile', 'ProfileController@display');
+    $users = DB::table('user_profiles')->get();
+    return view('displayedProfile', compact('users'));
+    /*
+    $usersSkills = DB::table('profile_skills')->get();
+    return view('displayedProfile', compact('$usersSkills'));
+    $usersEducation = DB::table('profile_education')->get();
+    return view('displayedProfile', compact('$usersEducation'));
+    */
 })->name('displayedProfile');
 
 Route::get('/profileSkills', function(){

@@ -16,16 +16,18 @@ class ProfileEducationController extends Controller
   public function store(Request $request)
    {
        $this->validate($request, [
-           'skill1' => 'required'
-           ]);
+           'educationArea1' => 'required',
+           'educationType1' => 'required'
+          ]);
+
            for ($i = 1; $i < 11; $i++){
-               $nullCheck = $request->input('skill'.$i);
+               $nullCheck = $request->input('education'.$i);
                if(!isset($nullCheck) || trim($nullCheck)  == '') {
 
                }else {
                $post = new profileEducation;
-               $post->skill = $request->input('skill'.$i);
-               $post->userID = auth()->user()->id;
+               $post->skill = $request->input('education'.$i);
+               //$post->userID = auth()->user()->id;
                $post->save();
                }
            }

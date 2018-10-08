@@ -59,10 +59,11 @@ class ProfileController extends Controller
         $post->save();
         return redirect('/profileSkills');
     }
-
+/*
     public function display()
     {
       $profileInfo = UserProfile::all();
       return view('/displayedProfile', compact('user_profile'))
     }
+*/
 }

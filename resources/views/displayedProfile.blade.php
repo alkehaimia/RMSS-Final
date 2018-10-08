@@ -18,44 +18,45 @@
               <br>
               <div class="panel-body" align="left">
 
+                <h4>Your Profile</h4>
+                <br>
                 <table>
-                  @foreach($profileInfo as $key => $value)
+                  @foreach($users as $user)
                     <tr>
-                      <!--<td>First Name</td>-->
-                      <td>{{$value->firstName}}</td>
+                      <td>First Name: </td>
+                      <td>{{$user->firstName}}</td>
                     </tr>
                     <tr>
-                      <!--<td>Last Name</td>-->
-                      <td>{{$value->lastName}}</td>
+                      <td>Last Name: </td>
+                      <td>{{$user->lastName}}</td>
                     </tr>
                     <tr>
-                      <!--<td>Current Job</td>-->
-                      <td>{{$value->currentJob}}</td>
+                      <td>Current Job: </td>
+                      <td>{{$user->currentJob}}</td>
                     </tr>
                     <tr>
-                      <!--<td>Previous Job</td>-->
-                      <td>{{$value->previousJob}}</td>
+                      <td>Previous Job: </td>
+                      <td>{{$user->previousJob}}</td>
                     </tr>
                     <tr>
-                      <!--<td>Location</td>-->
-                      <td>{{$value->location}}</td>
+                      <td>Location: </td>
+                      <td>{{$user->location}}</td>
                     </tr>
                     <tr>
-                      <!--<td>Area of Work</td>-->
-                      <td>{{$value->areaOfWork}}</td>
+                      <td>Area of Work: </td>
+                      <td>{{$user->areaOfWork}}</td>
                     </tr>
                     <tr>
-                      <!--<td>Job Preference</td>-->
-                      <td>{{$value->jobPreference}}</td>
+                      <td>Job Preference: </td>
+                      <td>{{$user->jobPreference}}</td>
                     </tr>
                     <tr>
-                      <!--<td>Describe Yourself</td>-->
-                      <td>{{$value->bioDescription}}</td>
+                      <td>Describe Yourself: </td>
+                      <td>{{$user->bioDescription}}</td>
                     </tr>
                   @endforeach
                 </table>
-
-              </div>
+                <br><br>
 
             <br> <br>
 

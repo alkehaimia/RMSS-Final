@@ -25,7 +25,7 @@ class ProfileSkillsController extends Controller
                }else {
                $post = new ProfileSkills;
                $post->skill = $request->input('skill'.$i);
-               $post->userID = auth()->user()->id;
+               //$post->userID = auth()->user()->id;
                $post->save();
                }
            }
