@@ -14,13 +14,11 @@ class CreateEducationRequirementTable extends Migration
     public function up()
     {
         Schema::create('education_requirement', function (Blueprint $table) {
-            $table->increments('education_requirement_id');
-
-            $table->integer('User_id');
+            $table->increments('education_requirement_id');  
             $table->integer('Job_Listing_id');
+            $table->integer('User_id');
             $table->integer('Education_Required');
             $table->string('education_area');
-            $table->integer('ERequirementFK');
             $table->timestamps();
 
         });

@@ -17,7 +17,6 @@ class CreateSkillsRequirementTable extends Migration
             $table->increments('Job_Skills_id');
             $table->integer('User_id');
             $table->integer('Job_Listing_id');
-            $table->integer('JSkillsFK');
             $table->string('Skill_required');
             $table->timestamps();
         });

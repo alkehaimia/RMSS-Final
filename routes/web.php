@@ -24,6 +24,7 @@ Route::get('/home', function (){
     return view('index');
 })->name('index');
 
+
 Route::resource('createJob', 'createJobController');
 Route::resource('createJob2', 'createJob2Controller');
 Route::resource('createJob3', 'createJob3Controller');
@@ -98,8 +99,9 @@ Route::get('/matchmake/{jobListingID}', function ($jobListingID){
 			->where('job_listing.job_listing_ID',$jobListingID)
 			->distinct()
 			->get();
-    return view('matchmake', compact('joblistings'));
-    
+
+	return view('matchmake', compact('joblistings'));
+
 
 	// $users = DB::table('user_profile')
  //            ->join('education', 'user_profile.profile_ID', '=', 'education.profile_ID')
@@ -108,6 +110,7 @@ Route::get('/matchmake/{jobListingID}', function ($jobListingID){
  //    return view('matchmake', compact('users'));
 
 })->name('matchmake');
+
 
 Route::get('/matchmake/{jobListingID}/more', function ($jobListingID){
 
@@ -118,6 +121,7 @@ $job4 = createJob4::where('Job_Listing_id', $jobListingID)->get();
 return view('matchmake_more')->with('createJob', $job)->with('createJob2', $job2)->with('createJob3', $job3)->with('createJob4', $job4);
 
 })->name('matchmakejobs_more');
+
 
 
 Route::get('/matchmakejoblisting', function (){

@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 
 @section('content')
@@ -52,3 +53,4 @@
 
 </tr>
 @endsection
+

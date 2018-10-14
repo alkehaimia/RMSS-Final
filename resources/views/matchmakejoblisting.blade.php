@@ -1,6 +1,8 @@
+
 @extends('layouts.app')
 
 @section('content')
+
 
 <!doctype html>
 
@@ -33,3 +35,4 @@
 </html>
 
 @endsection
+
