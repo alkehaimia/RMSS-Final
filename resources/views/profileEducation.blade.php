@@ -29,46 +29,46 @@
                   {!! Form::open(['action' => 'ProfileEducationController@store', 'method' => 'Post']) !!}
 
                     <div class="form-group">
-                      {{Form::label('educationArea1', 'Field of Study 1')}}
-                      {{Form::text('educationArea1', '', ['class' => 'form-control'])}}
+                      {{Form::label('Education_Area1', 'Field of Study 1')}}
+                      {{Form::text('Education_Area1', '', ['class' => 'form-control'])}}
                       <br>
-                      {{Form::select('educationType1', array('1' => 'High School Diploma','2' => 'Tafe Degree','3' => 'Associates Degree','4' => 'Bachelors Degree','5' => 'Masters Degree','6' => 'PHD'))}}
+                      {{Form::select('Education_Type1', array('1' => 'High School Diploma','2' => 'Tafe Degree','3' => 'Associates Degree','4' => 'Bachelors Degree','5' => 'Masters Degree','6' => 'PHD'))}}
                     </div>
 
                     <br><br>
 
                     <div class="form-group">
-                      {{Form::label('educationArea2', 'Field of Study 2')}}
-                      {{Form::text('educationArea2', '', ['class' => 'form-control'])}}
+                      {{Form::label('Education_Area2', 'Field of Study 2')}}
+                      {{Form::text('Education_Area2', '', ['class' => 'form-control'])}}
                       <br>
-                      {{Form::select('educationType2', array('1' => 'High School Diploma','2' => 'Tafe Degree','3' => 'Associates Degree','4' => 'Bachelors Degree','5' => 'Masters Degree','6' => 'PHD'))}}
+                      {{Form::select('Education_Type2', array('1' => 'High School Diploma','2' => 'Tafe Degree','3' => 'Associates Degree','4' => 'Bachelors Degree','5' => 'Masters Degree','6' => 'PHD'))}}
                     </div>
 
                     <br><br>
 
                     <div class="form-group">
-                      {{Form::label('educationArea3', 'Field of Study 3')}}
-                      {{Form::text('educationArea3', '', ['class' => 'form-control'])}}
+                      {{Form::label('Education_Area3', 'Field of Study 3')}}
+                      {{Form::text('Education_Area3', '', ['class' => 'form-control'])}}
                       <br>
-                      {{Form::select('educationType3', array('1' => 'High School Diploma','2' => 'Tafe Degree','3' => 'Associates Degree','4' => 'Bachelors Degree','5' => 'Masters Degree','6' => 'PHD'))}}
+                      {{Form::select('Education_Type3', array('1' => 'High School Diploma','2' => 'Tafe Degree','3' => 'Associates Degree','4' => 'Bachelors Degree','5' => 'Masters Degree','6' => 'PHD'))}}
                     </div>
 
                     <br><br>
 
                     <div class="form-group">
-                      {{Form::label('educationArea4', 'Field of Study 4')}}
-                      {{Form::text('educationArea4', '', ['class' => 'form-control'])}}
+                      {{Form::label('Education_Area4', 'Field of Study 4')}}
+                      {{Form::text('Education_Area4', '', ['class' => 'form-control'])}}
                       <br>
-                      {{Form::select('educationType4', array('1' => 'High School Diploma','2' => 'Tafe Degree','3' => 'Associates Degree','4' => 'Bachelors Degree','5' => 'Masters Degree','6' => 'PHD'))}}
+                      {{Form::select('Education_Type4', array('1' => 'High School Diploma','2' => 'Tafe Degree','3' => 'Associates Degree','4' => 'Bachelors Degree','5' => 'Masters Degree','6' => 'PHD'))}}
                     </div>
 
                     <br><br>
 
                     <div class="form-group">
-                      {{Form::label('educationArea5', 'Field of Study 5')}}
-                      {{Form::text('educationArea5', '', ['class' => 'form-control'])}}
+                      {{Form::label('Education_Area5', 'Field of Study 5')}}
+                      {{Form::text('Education_Area5', '', ['class' => 'form-control'])}}
                       <br>
-                      {{Form::select('educationType5', array('1' => 'High School Diploma','2' => 'Tafe Degree','3' => 'Associates Degree','4' => 'Bachelors Degree','5' => 'Masters Degree','6' => 'PHD'))}}
+                      {{Form::select('Education_Type5', array('1' => 'High School Diploma','2' => 'Tafe Degree','3' => 'Associates Degree','4' => 'Bachelors Degree','5' => 'Masters Degree','6' => 'PHD'))}}
                     </div>
 
                     <br><br>

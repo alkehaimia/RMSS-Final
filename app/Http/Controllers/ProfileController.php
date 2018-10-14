@@ -35,27 +35,29 @@ class ProfileController extends Controller
 
     public function store(Request $request)
     {
-        $this->validate($request, [
-             'firstName' => 'required',
-             'lastName' => 'required',
-             'currentJob' => 'required',
-             'previousJob' => 'required',
-             'location' => 'required',
-             'areaOfWork' => 'required',
-             'jobPreference' => 'required',
-             'bioDescription' => 'required'
+       $this->validate($request, [
+             'First_Name' => 'required',
+             'Last_Name' => 'required',
+             'Date_of_Birth' => 'required',
+             'Sex' => 'required',
+             'Current_Job' => 'required',
+             'Location' => 'required',
+             'Area_of_Work' => 'required',
+             'Job_Preference' => 'required',
+             'Bio_Description' => 'required'
         ]);
 
         $post = new UserProfile;
-        $post->firstName = $request->input('firstName');
-        $post->lastName = $request->input('lastName');
-        $post->currentJob = $request->input('currentJob');
-        $post->previousJob = $request->input('previousJob');
-        $post->location = $request->input('location');
-        $post->areaOfWork = $request->input('areaOfWork');
-        $post->jobPreference = $request->input('jobPreference');
-        $post->bioDescription = $request->input('bioDescription');
-        //$post->userID = auth()->user()->id;
+        $post->First_Name = $request->input('First_Name');
+        $post->Last_Name = $request->input('Last_Name');
+        $post->Date_of_Birth = $request->input('Date_of_Birth');
+        $post->Sex = $request->input('Sex');
+        $post->Current_Job = $request->input('Current_Job');
+        $post->Location = $request->input('Location');
+        $post->Area_of_Work = $request->input('Area_of_Work');
+        $post->Job_Preference = $request->input('Job_Preference');
+        $post->Bio_Description = $request->input('Bio_Description');
+        $post->user_ID = auth()->user()->id;
         $post->save();
         return redirect('/profileSkills');
     }

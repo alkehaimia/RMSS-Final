@@ -20,43 +20,48 @@
 
                 {!! Form::open(['action' => 'ProfileController@store', 'method' => 'Post']) !!}
                   <div class="form-group">
-                    {{Form::label('firstName', 'First Name')}}
-                    {{Form::text('firstName', '', ['class' => 'form-control'])}}
+                    {{Form::label('First_Name', 'First Name')}}
+                    {{Form::text('First_Name', '', ['class' => 'form-control'])}}
                   </div>
 
                   <div class="form-group">
-                    {{Form::label('lastName', 'Last Name')}}
-                    {{Form::text('lastName', '', ['class' => 'form-control'])}}
+                    {{Form::label('Last_Name', 'Last Name')}}
+                    {{Form::text('Last_Name', '', ['class' => 'form-control'])}}
                   </div>
 
                   <div class="form-group">
-                    {{Form::label('currentJob', 'Current Job')}}
-                    {{Form::text('currentJob', '', ['class' => 'form-control'])}}
+                    {{Form::label('Date_of_Birth', 'Date of Birth')}}
+                    {{Form::text('Date_of_Birth', '', ['class' => 'form-control'])}}
                   </div>
 
                   <div class="form-group">
-                    {{Form::label('previousJob', 'Previous Job')}}
-                    {{Form::text('previousJob', '', ['class' => 'form-control'])}}
+                    {{Form::label('Sex', 'Your Sex')}}
+                    {{Form::text('Sex', '', ['class' => 'form-control'])}}
                   </div>
 
                   <div class="form-group">
-                    {{Form::label('location', 'Location')}}
-                    {{Form::text('location', '', ['class' => 'form-control'])}}
+                    {{Form::label('Current_Job', 'Current Job')}}
+                    {{Form::text('Current_Job', '', ['class' => 'form-control'])}}
                   </div>
 
                   <div class="form-group">
-                    {{Form::label('areaOfWork', 'Area Of Work')}}
-                    {{Form::text('areaOfWork', '', ['class' => 'form-control'])}}
+                    {{Form::label('Location', 'Location')}}
+                    {{Form::text('Location', '', ['class' => 'form-control'])}}
                   </div>
 
                   <div class="form-group">
-                    {{Form::label('jobPreference', 'Job Preference')}}
-                    {{Form::text('jobPreference', '', ['class' => 'form-control'])}}
+                    {{Form::label('Area_of_Work', 'Area Of Work')}}
+                    {{Form::text('Area_of_Work', '', ['class' => 'form-control'])}}
                   </div>
 
                   <div class="form-group">
-                    {{Form::label('bioDescription', 'Describe Yourself')}}
-                    {{Form::textarea('bioDescription', '', ['class' => 'form-control'])}}
+                    {{Form::label('Job_Preference', 'Job Preference')}}
+                    {{Form::text('Job_Preference', '', ['class' => 'form-control'])}}
+                  </div>
+
+                  <div class="form-group">
+                    {{Form::label('Bio_Description', 'Describe Yourself')}}
+                    {{Form::textarea('Bio_Description', '', ['class' => 'form-control'])}}
                   </div>
 
                   {{Form::submit('next page', ['class'=>'btn btn-primary'])}}
@@ -76,39 +81,3 @@
   </div>
 
 @endsection
-
-<!--
-<input type="text" name="skill_1" placeholder="Skill 1" required> <br> <br>
-<input type="text" name="skill_2" placeholder="Skill 2"> <br> <br>
-<input type="text" name="skill_3" placeholder="Skill 3"> <br> <br>
-<input type="text" name="skill_4" placeholder="Skill 4"> <br> <br>
-<input type="text" name="skill_5" placeholder="Skill 5"> <br> <br>
-<input type="text" name="skill_6" placeholder="Skill 6"> <br> <br>
-<input type="text" name="skill_7" placeholder="Skill 7"> <br> <br>
-<input type="text" name="skill_8" placeholder="Skill 8"> <br> <br>
-<input type="text" name="skill_9" placeholder="Skill 9"> <br> <br>
-<input type="text" name="skill_10" placeholder="Skill 10"> <br> <br>
--->
-
-<!--
-<p>How many skills would you like to enter?</p>
-<br>
-<p>Please enter in the box <b>below</b>.</p>
-<br>
-<input type="text" name="numberOfSkills" id="numberOfSkills" placeholder="Number of Skills"></input>
-<br><br>
-<button type="button" onclick="addFields()">Add More Skills</button>
-comment out normally -> <a href="#" onclick="addFields()">Add More Skills</a>
-<br><br>
-<h5>Skills</h5>
-<br><br>
-
-<form action="" method="POST">
-  <div class="panel-body" name="addSkillsField" id="addSkillsField">
-
-  </div>
-
-  <p>Click here to submit your <b>skills</b></p>
-  <input type="submit" value="Save"></input>
-  </form>
--->

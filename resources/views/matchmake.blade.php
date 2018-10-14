@@ -14,15 +14,15 @@
 
 <body>
 <center>
-<h1> Your Profile </h1>
+<h1> Matchmaking </h1>
 </center>
 
-        @foreach ($UserProfile as $UserProfile)
+        @foreach ($users as $user)
 
         <div class="card">
         <div class="card-body">
-        <h4> <a href="/displayedProfile/{{$UserProfile->profile_ID}}">Name: {{ $UserProfile->First_Name }}</a> </h4>
-        <h4> Last Name: {{ $UserProfile->Last_Name }} </h4>
+        <h4> <a href="/matchmake/{{$user->profile_ID}}/more">Name: {{ $user->First_Name }}</a> </h4>
+        <h4> Last Name: {{ $user->Last_Name }} </h4>
         </div>
         </div>
 
