@@ -176,7 +176,7 @@ Route::post('/contactUS', ['as'=>'contactus.store','uses'=>'ContactUSController@
 
 Route::group(['prefix' => 'users'], function(){
   Route::resource('/','UserController');
-
+});
 
 Route::get('/profile', function(){
     return view('profile');
@@ -209,9 +209,7 @@ Auth::routes();
 
 
 //Route::get('/home', 'HomeController@index')->name('home');
-?>
 
-});
 //Route::get('/', function () {
   //  return view('index');
 //});
