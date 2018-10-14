@@ -27,7 +27,9 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function createJob(){
-        return $this->hasMany('App\createJob');
+
+    public function UserProfile(){
+        return $this->hasMany('App\UserProfile');
+
     }
 }

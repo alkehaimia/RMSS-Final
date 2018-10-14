@@ -12,6 +12,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
     <!--bootstrap 3.3.7-->
     <link rel="stylesheet" href="{{asset('bower_components/bootstrap/dist/css/bootstrap.min.css')}}">
@@ -35,11 +36,16 @@
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">RMSS
                 </a>
+                <a class="navbar-brand" href="{{ url('/profile') }}">Your Profile
+                </a>
+                <a class="navbar-brand" href="{{ url('/JobSeekerResults') }}">Your Results
+
                 <a class="navbar-brand" href="{{ url('/createJob') }}">Create job
                 </a>
                 <a class="navbar-brand" href="{{ url('/showJobs') }}">Show Jobs
                 </a>
                 <a class="navbar-brand" href="{{ url('/profile') }}">Your Profile
+
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>

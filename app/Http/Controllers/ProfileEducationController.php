@@ -4,7 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ProfileEducation extends Controller
+
+use App\ProfileEducation;
+use App\UserProfile;
+
+class ProfileEducationController extends Controller
+
 {
   public function showProfile()
   {
@@ -14,19 +19,30 @@ class ProfileEducation extends Controller
   public function store(Request $request)
    {
        $this->validate($request, [
-           'skill1' => 'required'
-           ]);
-           for ($i = 1; $i < 11; $i++){
-               $nullCheck = $request->input('skill'.$i);
+
+           'Education_Area1' => 'required',
+           'Education_Type1' => 'required'
+          ]);
+
+           for ($i = 1; $i < 6; $i++){
+
+               $profile_New2 = UserProfile::latest()->value('profile_ID');
+
+               $nullCheck = $request->input('Education_Area'.$i);
+
                if(!isset($nullCheck) || trim($nullCheck)  == '') {
 
                }else {
                $post = new profileEducation;
-               $post->skill = $request->input('skill'.$i);
-               $post->userID = auth()->user()->id;
+
+               $post->Education_Area = $request->input('Education_Area'.$i);
+               $post->Education_Type = $request->input('Education_Type'.$i);
+               $post->User_ID = auth()->user()->id;
+               $post->profile_ID = $profile_New2;
                $post->save();
                }
            }
-           return redirect('/displayedProfile');
+           return redirect('/profilePreviousJobs');
+
    }
 }

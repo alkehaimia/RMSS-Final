@@ -26,7 +26,9 @@
               <br>
                 <div class="panel-body" align="left">
 
-                  {!! Form::open(['action' => 'createJob2Controller@store', 'method' => 'Post']) !!}
+
+                  {!! Form::open(['action' => 'ProfileSkillsController@store', 'method' => 'Post']) !!}
+
                       <div class="form-group">
                       {{Form::label('skill', 'skill1')}}
                       {{Form::text('skill1', '', ['class' => 'form-control'])}}

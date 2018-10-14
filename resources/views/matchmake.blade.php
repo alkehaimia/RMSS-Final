@@ -1,3 +1,9 @@
+
+@extends('layouts.app')
+
+@section('content')
+
+
 <!doctype html>
 
 <html>
@@ -10,17 +16,23 @@
 
 <body>
 
-    <ul>
+<center>
+<h1> Matchmaking </h1>
+</center>
 
         @foreach ($users as $user)
 
-        <li>{{ $user->First_Name }} {{ $user->Last_Name }} {{ $user->Date_of_Birth }} {{ $user->Sex }} {{ $user->First_Name }} {{ $user->Location }} {{ $user->Current_Job }}</li>
-
+        <div class="card">
+        <div class="card-body">
+        <h4> <a href="/matchmake/{{$user->profile_ID}}/more">Name: {{ $user->First_Name }}</a> </h4>
+        <h4> Last Name: {{ $user->Last_Name }} </h4>
+        </div>
+        </div>
 
         @endforeach
-
-    </ul>
 
 </body>
 
 </html>
+
+@endsection

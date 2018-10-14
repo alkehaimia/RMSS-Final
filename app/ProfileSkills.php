@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class ProfileSkills extends Model
 {
 
-  protected $table = 'profileSkills';
-  public $primaryKey = 'id';
-  public $timestamps = false;
+
+  protected $table = 'skills';
+  public $primaryKey = 'skill_id';
 
 }

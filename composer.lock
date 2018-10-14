@@ -6,7 +6,7 @@
     ],
 
     "content-hash": "3900f2e69b8e4eb7f28eecccc6878e0e",
-  
+
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",

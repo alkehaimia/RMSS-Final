@@ -2,10 +2,12 @@
 
 @section('content')
 
+
 <head>
   <!--<script src="{{ asset('js/createSkillsInput.js') }}" defer></script>--->
   <link rel="javascript" type="javascript" href="{{ url('/createSkillsInput.js') }}">
 </head>
+
 
 <div class="container">
     <div class="row">
@@ -25,48 +27,50 @@
 
                 {!! Form::open(['action' => 'ProfileController@store', 'method' => 'Post']) !!}
                   <div class="form-group">
-                    {{Form::label('firstName', 'First Name')}}
-                    {{Form::text('firstname', '', ['class' => 'form-control'])}}
+
+                    {{Form::label('First_Name', 'First Name')}}
+                    {{Form::text('First_Name', '', ['class' => 'form-control'])}}
                   </div>
 
                   <div class="form-group">
-                    {{Form::label('lastName', 'Last Name')}}
-                    {{Form::text('lastName', '', ['class' => 'form-control'])}}
+                    {{Form::label('Last_Name', 'Last Name')}}
+                    {{Form::text('Last_Name', '', ['class' => 'form-control'])}}
                   </div>
 
                   <div class="form-group">
-                    {{Form::label('education ', 'Education')}}
-                    {{Form::text('education', '', ['class' => 'form-control'])}}
+                    {{Form::label('Date_of_Birth', 'Date of Birth')}}
+                    {{Form::text('Date_of_Birth', '', ['class' => 'form-control'])}}
                   </div>
 
                   <div class="form-group">
-                    {{Form::label('currentJob', 'Current Job')}}
-                    {{Form::text('currentJob', '', ['class' => 'form-control'])}}
+                    {{Form::label('Sex', 'Your Sex')}}
+                    {{Form::text('Sex', '', ['class' => 'form-control'])}}
                   </div>
 
                   <div class="form-group">
-                    {{Form::label('previousJob', 'Previous Job')}}
-                    {{Form::text('previousJob', '', ['class' => 'form-control'])}}
+                    {{Form::label('Current_Job', 'Current Job')}}
+                    {{Form::text('Current_Job', '', ['class' => 'form-control'])}}
                   </div>
 
                   <div class="form-group">
-                    {{Form::label('location', 'Location')}}
-                    {{Form::text('location', '', ['class' => 'form-control'])}}
+                    {{Form::label('Location', 'Location')}}
+                    {{Form::text('Location', '', ['class' => 'form-control'])}}
                   </div>
 
                   <div class="form-group">
-                    {{Form::label('areaOfWork', 'Area Of Work')}}
-                    {{Form::text('areaOfWork', '', ['class' => 'form-control'])}}
+                    {{Form::label('Area_of_Work', 'Area Of Work')}}
+                    {{Form::text('Area_of_Work', '', ['class' => 'form-control'])}}
                   </div>
 
                   <div class="form-group">
-                    {{Form::label('jobPreference', 'Job Preference')}}
-                    {{Form::text('jobPreference', '', ['class' => 'form-control'])}}
+                    {{Form::label('Job_Preference', 'Job Preference')}}
+                    {{Form::text('Job_Preference', '', ['class' => 'form-control'])}}
                   </div>
 
                   <div class="form-group">
-                    {{Form::label('bioDescription', 'Personal Description')}}
-                    {{Form::textarea('bioDescription', '', ['class' => 'form-control'])}}
+                    {{Form::label('Bio_Description', 'Describe Yourself')}}
+                    {{Form::textarea('Bio_Description', '', ['class' => 'form-control'])}}
+
                   </div>
 
                   {{Form::submit('next page', ['class'=>'btn btn-primary'])}}
@@ -86,6 +90,7 @@
   </div>
 
 @endsection
+
 
 <!--
 <input type="text" name="skill_1" placeholder="Skill 1" required> <br> <br>
@@ -122,3 +127,4 @@ comment out normally -> <a href="#" onclick="addFields()">Add More Skills</a>
   <input type="submit" value="Save"></input>
   </form>
 -->
+
