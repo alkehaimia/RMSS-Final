@@ -1,3 +1,8 @@
+
+@extends('layouts.app')
+
+@section('content')
+
 <!doctype html>
 
 <html>
@@ -9,18 +14,24 @@
 </head>
 
 <body>
-
-    <ul>
+<center>
+<h1> Matchmaking </h1>
+</center>
 
         @foreach ($joblistings as $joblisting)
 
-        <li>Job Name: {{ $joblisting->Job_Name }}
-        <br>Job Company: {{ $joblisting->Job_Company }}</li>
-
+        <div class="card">
+        <div class="card-body">
+        <h4> <a href="/matchmakejobs/{{$joblisting->Job_Listing_id}}/more">Job Name: {{ $joblisting->Job_Name }}</a> </h4>
+        <h4> Job Company: {{ $joblisting->Job_Company }} </h4>
+        </div>
+        </div>
+    
         @endforeach
-
-    </ul>
 
 </body>
 
 </html>
+
+@endsection
+

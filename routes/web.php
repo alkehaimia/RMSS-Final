@@ -11,6 +11,11 @@
 |
 */
 
+use \App\createJob;
+use \App\createJob2;
+use \App\createJob3;
+use \App\createJob4;
+
 Route::get('/', function (){
     return view('index');
 })->name('index');
@@ -18,6 +23,13 @@ Route::get('/', function (){
 Route::get('/home', function (){
     return view('index');
 })->name('index');
+
+
+Route::resource('createJob', 'createJobController');
+Route::resource('createJob2', 'createJob2Controller');
+Route::resource('createJob3', 'createJob3Controller');
+Route::resource('createJob4', 'createJob4Controller');
+Route::resource('showJobs', 'showJobsController');
 
 Route::get('/users', function (){
     
@@ -80,6 +92,7 @@ Route::get('/matchmakeuser/{Education_Area}/{Education_Type}/{Location}/{previou
 
 Route::get('/matchmake/{jobListingID}', function ($jobListingID){
 
+
     $educationrequired = DB::table('education_requirement')->where('job_listing_ID',$jobListingID)->value('education_required');
     // $educationarearequired = DB::table('education_requirement')->where('job_listing_ID',$jobListingID)->value('education_area');
     $skillsrequired = DB::table('skills_requirement')->where('job_listing_ID',$jobListingID)->pluck('skill_required');
@@ -134,6 +147,16 @@ Route::get('/matchmakejobs/{profile_ID}', function ($profileID){
 
 })->name('matchmakejobs');
 
+Route::get('/matchmakejobs/{jobListingID}/more', function ($jobListingID){
+
+$job = createJob::find($jobListingID);
+$job2 = createJob2::where('Job_Listing_id', $jobListingID)->get();
+$job3 = createJob3::where('Job_Listing_id', $jobListingID)->get();
+$job4 = createJob4::where('Job_Listing_id', $jobListingID)->get();
+return view('matchmakejobs_more')->with('createJob', $job)->with('createJob2', $job2)->with('createJob3', $job3)->with('createJob4', $job4);
+
+})->name('matchmakejobs_more');
+
 Route::get('/matchmakejoblisting', function (){
 	$joblistings = DB::table('job_listing')
 			->join('education_requirement', 'job_listing.Job_Listing_ID', '=', 'education_requirement.Job_Listing_ID')
@@ -148,8 +171,111 @@ Route::get('/matchmakejoblisting', function (){
   //  return view('index');
 //});
 
+
 //Authentication Routes
 Auth::routes();
 
+Route::get('/index', function (){
+    return view('index');
+})->name('index');
+
+Route::group(['prefix' => 'users'], function(){
+  Route::resource('/','UserController');
+	
+});
+
+/**Route::get('/', function (){
+    return view('index');
+})->name('index');
+
+Route::get('/home', function (){
+    return view('index');
+})->name('index');
+**/
+Route::get('/about', function (){
+    return view('about');
+})->name('about');
+
+Route::get('/support', function (){
+  return view('support');
+})->name('support');
+//Route::get('/contact', function (){
+  //  return view('contact');
+//})->name('contact');
+//Route::get('/contact',[
+  //'uses'=>'ContactController@show']);
+
+Route::get('/contactUS', 'ContactUSController@contactus');
+Route::post('/contactUS', ['as'=>'contactus.store','uses'=>'ContactUSController@contactUSPost']);
+
+
+Route::group(['prefix' => 'users'], function(){
+  Route::resource('/','UserController');
+});
+
+Route::get('/profile', function(){
+    return view('profile');
+})->name('profile');
+
+Route::get('/displayedProfile', function(){
+    return view('displayedProfile');
+})->name('displayedProfile');
+
+Route::get('/profileSkills', function(){
+    return view('profileSkills');
+})->name('profileSkills');
+
+Route::get('/profileEducation', function(){
+    return view('profileEducation');
+})->name('profileEducation');
+
+Route::resource('UserProfile', 'ProfileController');
+Route::resource('ProfileSkills', 'ProfileSkillsController');
+Route::resource('ProfileEducation', 'ProfileEducationController');
+
+/*
+Route::resource('profile', 'ProfileController');
+Route::resource('profile_skills', 'ProfileSkillsController');
+Route::resource('profile_education', 'ProfileEducationController');
+*/
+
+//Authentication Routes
+Auth::routes();
+
+
 //Route::get('/home', 'HomeController@index')->name('home');
+
+//Route::get('/', function () {
+  //  return view('index');
+//});
+
+//Authentication Routes
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/' , function(){
+  if(Auth::check()){return Redirect::to('home');}
+  return view('index');
+});
+
+Route::delete('/delete/{id}','UserController@destory');
+
+
+
+Route::group(['middleware' => ['web','auth']] ,function(){
+  Route::get('/home', function (){
+      return view('home');
+  })->name('home');
+});
+Route::get('/home',function(){
+  if(Auth::user()->admin == 0){
+    return view('home');
+} else{
+  $users['users'] = \App\User::all();
+  return view('adminhome',$users);
+}
+});
+
 ?>
+
