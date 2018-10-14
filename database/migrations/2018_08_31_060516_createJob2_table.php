@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class ProfileTable extends Migration
+class CreateJob2Table extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,10 @@ class ProfileTable extends Migration
      */
     public function up()
     {
-        // creates profile table
-        Schema::create('Profile', function (Blueprint $table) {
+        Schema::create('skills', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('First name');
-            $table->string('Last Name');
-            $table->string('Location');
-            $table->string('Area of Interest');
-            $table->timestamps();
+            $table->integer('userID');
+            $table->string('skill');
         });
     }
 
@@ -31,6 +27,6 @@ class ProfileTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Profile');
+        Schema::dropIfExists('skills');
     }
 }

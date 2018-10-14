@@ -1,8 +1,6 @@
-
 @extends('layouts.app')
 
 @section('content')
-
 
 <!doctype html>
 
@@ -23,7 +21,7 @@
 
         <div class="card">
         <div class="card-body">
-        <h4> <a href="/">Job Name: {{ $joblisting->Job_Name }}</a> </h4>
+        <h4> <a href="/matchmakejobs/{{$joblisting->Job_Listing_id}}/more">Job Name: {{ $joblisting->Job_Name }}</a> </h4>
         <h4> Job Company: {{ $joblisting->Job_Company }} </h4>
         </div>
         </div>
@@ -35,4 +33,3 @@
 </html>
 
 @endsection
-

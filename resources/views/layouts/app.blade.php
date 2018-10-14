@@ -13,6 +13,15 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
+    <!--bootstrap 3.3.7-->
+    <link rel="stylesheet" href="{{asset('bower_components/bootstrap/dist/css/bootstrap.min.css')}}">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="{{asset('bower_components/font-awesome/css/font-awesome.min.css')}}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="{{ asset('js/createSkillsInput.js') }}" defer></script>
+
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
@@ -25,6 +34,12 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-RMSS">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">RMSS
+                </a>
+                <a class="navbar-brand" href="{{ url('/createJob') }}">Create job
+                </a>
+                <a class="navbar-brand" href="{{ url('/showJobs') }}">Show Jobs
+                </a>
+                <a class="navbar-brand" href="{{ url('/profile') }}">Your Profile
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -40,6 +55,12 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
+                          <li class="nav-item">
+                          <a class="nav-link" align="left" href="{{ url('/contactUS') }}">{{ __('Contact Us') }}</a>
+                          </li>
+                          <li class="nav-item">
+                          <a class="nav-link" align="left" href="{{ route('support') }}">{{ __('Support') }}</a>
+                          </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Log in') }}</a>
                             </li>
@@ -81,5 +102,14 @@
 </div>
             </footer>
     </div>
+    <footer class="main-footer" align="center">
+        <div class="pull-right hidden-xs" align="center">
+            <a href="{{ route('about') }}">{{ __('About Us') }}</a>
+            <br>
+          <b>Version</b> 1.0
+        </div>
+        <strong>Copyright &copy; 2018 <a href="https://www.rmit.edu.au">RMIT</a>.</strong> All rights
+        reserved.
+      </footer>
 </body>
 </html>
