@@ -15,8 +15,10 @@ class CreateJobListingTable extends Migration
     {
         Schema::create('job_listing', function (Blueprint $table) {
             $table->increments('Job_Listing_id');
+            $table->integer('User_id');
             $table->string('Job_Name');
             $table->string('Job_Company');
+            $table->string('Job_Area');
             $table->string('Job_Hours');
             $table->string('Contact_Information');
             $table->timestamps();

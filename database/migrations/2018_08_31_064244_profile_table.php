@@ -21,6 +21,7 @@ class ProfileTable extends Migration
             $table->string('Location');
             $table->string('Area of Interest');
             $table->timestamps();
+        });
     }
 
     /**
@@ -30,6 +31,6 @@ class ProfileTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('Profile');
     }
 }

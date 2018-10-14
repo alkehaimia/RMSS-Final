@@ -15,6 +15,7 @@ class CreateEducationTable extends Migration
     {
         Schema::create('education', function (Blueprint $table) {
             $table->increments('education_id');
+            $table->integer('profile_ID');
             $table->integer('EducationFK');
             $table->string('Education_Area');
             $table->integer('Education_Type');
