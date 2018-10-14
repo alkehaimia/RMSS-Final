@@ -12,10 +12,10 @@
 
     <ul>
 
-        @foreach ($joblistings as $joblisting)
+        @foreach ($users as $user)
 
-        <li>Job Name: {{ $joblisting->Job_Name }}
-            <br>Job Company: {{ $joblisting->Job_Company }}</li>
+        <li>{{ $user->First_Name }} {{ $user->Last_Name }} {{ $user->Date_of_Birth }} {{ $user->Sex }} {{ $user->First_Name }} {{ $user->Location }} {{ $user->Current_Job }}</li>
+
 
         @endforeach
 

@@ -16,6 +16,7 @@ class CreateEducationRequirementTable extends Migration
         Schema::create('education_requirement', function (Blueprint $table) {
             $table->increments('education_requirement_id');
             $table->integer('Job_Listing_id');
+			$table->string('education_area');
             $table->integer('Education_Required');
             $table->timestamps();
         });
