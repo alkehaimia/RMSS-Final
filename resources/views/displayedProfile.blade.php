@@ -2,6 +2,7 @@
 
 @section('content')
 
+
 <!doctype html>
 
 <html>
@@ -31,5 +32,6 @@
 </body>
 
 </html>
+
 
 @endsection

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+
 use App\UserProfile;
 
 class ProfileController extends Controller
@@ -35,6 +36,7 @@ class ProfileController extends Controller
 
     public function store(Request $request)
     {
+
        $this->validate($request, [
              'First_Name' => 'required',
              'Last_Name' => 'required',
@@ -68,4 +70,5 @@ class ProfileController extends Controller
       return view('/displayedProfile', compact('user_profile'))
     }
 */
+
 }

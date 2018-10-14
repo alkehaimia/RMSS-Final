@@ -29,6 +29,7 @@
                   {!! Form::open(['action' => 'ProfileEducationController@store', 'method' => 'Post']) !!}
 
                     <div class="form-group">
+
                       {{Form::label('Education_Area1', 'Field of Study 1')}}
                       {{Form::text('Education_Area1', '', ['class' => 'form-control'])}}
                       <br>
@@ -72,6 +73,7 @@
                     </div>
 
                     <br><br>
+
 
                     {{Form::submit('next page', ['class'=>'btn btn-primary'])}}
                     {!! Form::close() !!}

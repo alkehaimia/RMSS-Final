@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','admin',
     ];
 
     /**
@@ -27,7 +27,9 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+
     public function UserProfile(){
         return $this->hasMany('App\UserProfile');
+
     }
 }

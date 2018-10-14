@@ -3,7 +3,6 @@
 
 @section('content')
 
-
 <!doctype html>
 
 <html>
@@ -15,20 +14,19 @@
 </head>
 
 <body>
-
 <center>
 <h1> Matchmaking </h1>
 </center>
 
-        @foreach ($users as $user)
+        @foreach ($joblistings as $joblisting)
 
         <div class="card">
         <div class="card-body">
-        <h4> <a href="/matchmake/{{$user->profile_ID}}/more">Name: {{ $user->First_Name }}</a> </h4>
-        <h4> Last Name: {{ $user->Last_Name }} </h4>
+        <h4> <a href="/matchmakejobs/{{$joblisting->Job_Listing_id}}/more">Job Name: {{ $joblisting->Job_Name }}</a> </h4>
+        <h4> Job Company: {{ $joblisting->Job_Company }} </h4>
         </div>
         </div>
-
+    
         @endforeach
 
 </body>
@@ -36,3 +34,4 @@
 </html>
 
 @endsection
+
