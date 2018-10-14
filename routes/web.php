@@ -112,13 +112,13 @@ Route::get('/matchmake/{jobListingID}', function ($jobListingID){
 })->name('matchmake');
 
 
-Route::get('/matchmake/{jobListingID}/more', function ($jobListingID){
+Route::get('/matchmakejobs/{jobListingID}/more', function ($jobListingID){
 
 $job = createJob::find($jobListingID);
 $job2 = createJob2::where('Job_Listing_id', $jobListingID)->get();
 $job3 = createJob3::where('Job_Listing_id', $jobListingID)->get();
 $job4 = createJob4::where('Job_Listing_id', $jobListingID)->get();
-return view('matchmake_more')->with('createJob', $job)->with('createJob2', $job2)->with('createJob3', $job3)->with('createJob4', $job4);
+return view('matchmakejobs_more')->with('createJob', $job)->with('createJob2', $job2)->with('createJob3', $job3)->with('createJob4', $job4);
 
 })->name('matchmakejobs_more');
 
