@@ -2,55 +2,38 @@
 
 @section('content')
 
+<div class="container">
+<div class="col-12 col-md-6">
+
 {!! Form::open(['action' => 'createJobController@store', 'method' => 'Post']) !!}
-    <div class="form-group">
-    {{Form::label('name', 'name')}}
-    {{Form::text('name', '', ['class' => 'form-control'])}}
+    <div class="form-group {{ $errors->has('Job_Name') ? 'has-error' : '' }}">
+    {{Form::label('Job_Name', 'Job name')}}
+    {{Form::text('Job_Name', '', ['class' => 'form-control', 'id' => 'Job_Name', 'required'])}}
     </div>
 
-    <div class="form-group">
-    {{Form::label('education ', 'education')}}
-    {{Form::text('education', '', ['class' => 'form-control'])}}
+    <div class="form-group {{ $errors->has('Job_Company') ? 'has-error' : '' }}">
+    {{Form::label('Job_Company', 'Job company')}}
+    {{Form::text('Job_Company', '', ['class' => 'form-control', 'id' => 'Job_Company', 'required'])}}
     </div>
 
-    <div class="form-group">
-    {{Form::label('currentJob', 'currentJob')}}
-    {{Form::text('currentJob', '', ['class' => 'form-control'])}}
+    <div class="form-group {{ $errors->has('Job_Area') ? 'has-error' : '' }}">
+    {{Form::label('Job_Area', 'Job Field')}}
+    {{Form::text('Job_Area', '', ['class' => 'form-control', 'id' => 'Job_Area', 'required'])}}
     </div>
 
-    <div class="form-group">
-    {{Form::label('currentJobTime', 'currentJobTime')}}
-    {{Form::text('currentJobTime', '', ['class' => 'form-control'])}}
+    <div class="form-group {{ $errors->has('Job_Hours') ? 'has-error' : '' }}">
+    {{Form::label('Job_Hours', 'Job hours')}}
+    {{Form::text('Job_Hours', '', ['class' => 'form-control', 'id' => 'Job_Hours', 'required'])}}
     </div>
 
-    <div class="form-group">
-    {{Form::label('previousJob', 'previousJob')}}
-    {{Form::text('previousJob', '', ['class' => 'form-control'])}}
+    <div class="form-group {{ $errors->has('Contact_Information') ? 'has-error' : '' }}">
+    {{Form::label('Contact_Information', 'Contact Information')}}
+    {{Form::text('Contact_Information', '', ['class' => 'form-control', 'id' => 'Contact_Information', 'required'])}}
     </div>
-
-    <div class="form-group">
-    {{Form::label('previousJobTime', 'previousJobTime')}}
-    {{Form::text('previousJobTime', '', ['class' => 'form-control'])}}
-    </div>
-
-    <div class="form-group">
-    {{Form::label('location', 'location')}}
-    {{Form::text('location', '', ['class' => 'form-control'])}}
-    </div>
-
-    <div class="form-group">
-    {{Form::label('areaOfWork', 'areaOfWork')}}
-    {{Form::text('areaOfWork', '', ['class' => 'form-control'])}}
-    </div>
-
-    <div class="form-group">
-    {{Form::label('jobPreference', 'jobPreference')}}
-    {{Form::text('jobPreference', '', ['class' => 'form-control'])}}
-    </div>
-
-
 
     {{Form::submit('next page', ['class'=>'btn btn-primary'])}}
-{!! Form::close() !!}
+    {!! Form::close() !!}
+    </div>
+    </div>
 
 @endsection

@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\createJob2;
+use App\createJob3;
 use App\createJob;
 
-class createJob2Controller extends Controller
+class createJob3Controller extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class createJob2Controller extends Controller
      */
     public function index()
     {
-        return view('createJob2');
+        return view('createJob3');
     }
 
     /**
@@ -37,29 +37,31 @@ class createJob2Controller extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'skill1' => 'required'
+            'education1' => 'required',
+            'education1Type' => 'required'
             ]);
 
-            for ($i = 1; $i < 11; $i++){ 
+            for ($i = 1; $i < 6; $i++){ 
 
                 $job_id = createJob::latest()->value('Job_Listing_id');
 
-                $nullCheck = $request->input('skill'.$i);
+                $nullCheck = $request->input('education'.$i);
                 if(!isset($nullCheck) || trim($nullCheck)  == '') {
                    
                 }else { 
-
-                $post = new createJob2;
-                $post->Skill_required = $request->input('skill'.$i);
-                $post->User_id = auth()->user()->id;
+                    
+                $post = new createJob3;
+                $post->education_area = $request->input('education'.$i);
+                $post->Education_Required = $request->input('education'.$i.'Type');
                 $post->Job_Listing_id = $job_id;
+                $post->user_id = auth()->user()->id;
                 $post->save();
 
                 }
 
             }
 
-            return redirect('/createJob3'); 
+            return redirect('/createJob4');
     }
 
     /**

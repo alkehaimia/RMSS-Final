@@ -2,58 +2,63 @@
 
 @section('content')
 
+<div class="container">
+<div class="col-12 col-md-6">
+
 {!! Form::open(['action' => 'createJob2Controller@store', 'method' => 'Post']) !!}
-    <div class="form-group">
-    {{Form::label('skill', 'skill1')}}
-    {{Form::text('skill1', '', ['class' => 'form-control'])}}
+    <div class="form-group {{ $errors->has('skill1') ? 'has-error' : '' }}">
+    {{Form::label('Skill_required', 'Skill required')}}
+    {{Form::text('skill1', '', ['class' => 'form-control', 'id' => 'skill1', 'required'])}}
     </div>
 
     <div class="form-group">
-    {{Form::label('skill ', 'skill2')}}
+    {{Form::label('Skill_required ', 'Skill required')}}
     {{Form::text('skill2', '', ['class' => 'form-control'])}}
     </div>
 
     <div class="form-group">
-    {{Form::label('skill', 'skill3')}}
+    {{Form::label('Skill_required', 'Skill required')}}
     {{Form::text('skill3', '', ['class' => 'form-control'])}}
     </div>
 
     <div class="form-group">
-    {{Form::label('skill', 'skill4')}}
+    {{Form::label('Skill_required', 'Skill required')}}
     {{Form::text('skill4', '', ['class' => 'form-control'])}}
     </div>
 
     <div class="form-group">
-    {{Form::label('skill', 'skill5')}}
+    {{Form::label('Skill_required', 'Skill required')}}
     {{Form::text('skill5', '', ['class' => 'form-control'])}}
     </div>
 
     <div class="form-group">
-    {{Form::label('skill', 'skill6')}}
+    {{Form::label('Skill_required', 'Skill required')}}
     {{Form::text('skill6', '', ['class' => 'form-control'])}}
     </div>
 
     <div class="form-group">
-    {{Form::label('skill', 'skill7')}}
+    {{Form::label('Skill_required', 'Skill required')}}
     {{Form::text('skill7', '', ['class' => 'form-control'])}}
     </div>
 
     <div class="form-group">
-    {{Form::label('skill', 'skill8')}}
+    {{Form::label('Skill_required', 'Skill required')}}
     {{Form::text('skill8', '', ['class' => 'form-control'])}}
     </div>
 
     <div class="form-group">
-    {{Form::label('skill', 'skill9')}}
+    {{Form::label('Skill_required', 'Skill required')}}
     {{Form::text('skill9', '', ['class' => 'form-control'])}}
     </div>
 
     <div class="form-group">
-    {{Form::label('skill', 'skill10')}}
+    {{Form::label('Skill_required', 'Skill required')}}
     {{Form::text('skill10', '', ['class' => 'form-control'])}}
     </div>
 
-    {{Form::submit('Submit', ['class'=>'btn btn-primary'])}}
-{!! Form::close() !!}
+    {{Form::submit('next page', ['class'=>'btn btn-primary'])}}
+    {!! Form::close() !!}
+    </div>
+    </div>
 
 @endsection

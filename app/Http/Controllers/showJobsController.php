@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\createJob2;
-use App\createJob;
+use \App\User;
+use \App\createJob;
+use \App\createJob2;
+use \App\createJob3;
+use \App\createJob4;
 
-class createJob2Controller extends Controller
+class showJobsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +18,9 @@ class createJob2Controller extends Controller
      */
     public function index()
     {
-        return view('createJob2');
+        $user_id = auth()->user()->id;
+        $user = User::find($user_id);
+        return view('showJobs')->with('createJob', $user->createJob);
     }
 
     /**
@@ -36,30 +41,7 @@ class createJob2Controller extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'skill1' => 'required'
-            ]);
-
-            for ($i = 1; $i < 11; $i++){ 
-
-                $job_id = createJob::latest()->value('Job_Listing_id');
-
-                $nullCheck = $request->input('skill'.$i);
-                if(!isset($nullCheck) || trim($nullCheck)  == '') {
-                   
-                }else { 
-
-                $post = new createJob2;
-                $post->Skill_required = $request->input('skill'.$i);
-                $post->User_id = auth()->user()->id;
-                $post->Job_Listing_id = $job_id;
-                $post->save();
-
-                }
-
-            }
-
-            return redirect('/createJob3'); 
+        //
     }
 
     /**
@@ -70,7 +52,11 @@ class createJob2Controller extends Controller
      */
     public function show($id)
     {
-        //
+        $job = createJob::find($id);
+        $job2 = createJob2::where('Job_Listing_id', $id)->get();
+        $job3 = createJob3::where('Job_Listing_id', $id)->get();
+        $job4 = createJob4::where('Job_Listing_id', $id)->get();
+        return view('showJobs2')->with('createJob', $job)->with('createJob2', $job2)->with('createJob3', $job3)->with('createJob4', $job4);
     }
 
     /**
